@@ -1,0 +1,28 @@
+[3.413s] Invoking command in '/home/mohamed/mobile_ws/src/assem1_vision': PYTHONPATH=/home/mohamed/mobile_ws/build/assem1_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohamed/mobile_ws/install/assem1_vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/assem1_vision build --build-base /home/mohamed/mobile_ws/build/assem1_vision/build install --record /home/mohamed/mobile_ws/build/assem1_vision/install.log --single-version-externally-managed install_data
+[4.986s] running egg_info
+[4.988s] creating ../../build/assem1_vision/assem1_vision.egg-info
+[4.991s] writing ../../build/assem1_vision/assem1_vision.egg-info/PKG-INFO
+[4.995s] writing dependency_links to ../../build/assem1_vision/assem1_vision.egg-info/dependency_links.txt
+[5.000s] writing entry points to ../../build/assem1_vision/assem1_vision.egg-info/entry_points.txt
+[5.005s] writing requirements to ../../build/assem1_vision/assem1_vision.egg-info/requires.txt
+[5.005s] writing top-level names to ../../build/assem1_vision/assem1_vision.egg-info/top_level.txt
+[5.013s] writing manifest file '../../build/assem1_vision/assem1_vision.egg-info/SOURCES.txt'
+[5.024s] reading manifest file '../../build/assem1_vision/assem1_vision.egg-info/SOURCES.txt'
+[5.029s] writing manifest file '../../build/assem1_vision/assem1_vision.egg-info/SOURCES.txt'
+[5.031s] running build
+[5.034s] running build_py
+[5.035s] creating /home/mohamed/mobile_ws/build/assem1_vision/build
+[5.035s] creating /home/mohamed/mobile_ws/build/assem1_vision/build/lib
+[5.036s] creating /home/mohamed/mobile_ws/build/assem1_vision/build/lib/assem1_vision
+[5.036s] copying assem1_vision/color_detector.py -> /home/mohamed/mobile_ws/build/assem1_vision/build/lib/assem1_vision
+[5.041s] copying assem1_vision/__init__.py -> /home/mohamed/mobile_ws/build/assem1_vision/build/lib/assem1_vision
+[5.041s] running install
+[5.047s] running install_lib
+[5.051s] running install_data
+[5.055s] running install_egg_info
+[5.063s] removing '/home/mohamed/mobile_ws/install/assem1_vision/lib/python3.10/site-packages/assem1_vision-0.0.0-py3.10.egg-info' (and everything under it)
+[5.063s] Copying ../../build/assem1_vision/assem1_vision.egg-info to /home/mohamed/mobile_ws/install/assem1_vision/lib/python3.10/site-packages/assem1_vision-0.0.0-py3.10.egg-info
+[5.069s] running install_scripts
+[5.140s] Installing color_sorter script to /home/mohamed/mobile_ws/install/assem1_vision/lib/panda_vision
+[5.143s] writing list of installed files to '/home/mohamed/mobile_ws/build/assem1_vision/install.log'
+[5.261s] Invoked command in '/home/mohamed/mobile_ws/src/assem1_vision' returned '0': PYTHONPATH=/home/mohamed/mobile_ws/build/assem1_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohamed/mobile_ws/install/assem1_vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/assem1_vision build --build-base /home/mohamed/mobile_ws/build/assem1_vision/build install --record /home/mohamed/mobile_ws/build/assem1_vision/install.log --single-version-externally-managed install_data

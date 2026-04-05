@@ -1,0 +1,67 @@
+[0.055s] Invoking command in '/home/mohamed/mobile_ws/build/assem1_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake /home/mohamed/mobile_ws/src/assem1_description -DCMAKE_INSTALL_PREFIX=/home/mohamed/mobile_ws/install/assem1_description
+[0.310s] -- The C compiler identification is GNU 11.4.0
+[0.514s] -- The CXX compiler identification is GNU 11.4.0
+[0.572s] -- Detecting C compiler ABI info
+[1.083s] -- Detecting C compiler ABI info - done
+[1.156s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.160s] -- Detecting C compile features
+[1.160s] -- Detecting C compile features - done
+[1.183s] -- Detecting CXX compiler ABI info
+[1.597s] -- Detecting CXX compiler ABI info - done
+[1.626s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.629s] -- Detecting CXX compile features
+[1.629s] -- Detecting CXX compile features - done
+[1.646s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.256s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.954s] -- Configuring done
+[2.975s] -- Generating done
+[2.994s] -- Build files have been written to: /home/mohamed/mobile_ws/build/assem1_description
+[3.008s] Invoked command in '/home/mohamed/mobile_ws/build/assem1_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake /home/mohamed/mobile_ws/src/assem1_description -DCMAKE_INSTALL_PREFIX=/home/mohamed/mobile_ws/install/assem1_description
+[3.009s] Invoking command in '/home/mohamed/mobile_ws/build/assem1_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake --build /home/mohamed/mobile_ws/build/assem1_description -- -j2 -l2
+[3.128s] Invoked command in '/home/mohamed/mobile_ws/build/assem1_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake --build /home/mohamed/mobile_ws/build/assem1_description -- -j2 -l2
+[3.157s] Invoking command in '/home/mohamed/mobile_ws/build/assem1_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake --install /home/mohamed/mobile_ws/build/assem1_description
+[3.178s] -- Install configuration: ""
+[3.181s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/urdf
+[3.183s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/urdf/sensors.xacro
+[3.183s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/urdf/gazebo.xacro
+[3.184s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/urdf/mobile_manipulator.xacro
+[3.184s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/urdf/assem1.urdf.xacro
+[3.184s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/urdf/oldURDF.xacro
+[3.184s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/urdf/ros2_control.xacro
+[3.195s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/launch
+[3.195s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/launch/display.launch.py
+[3.196s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/launch/gazebo.launch.py
+[3.196s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/rviz
+[3.196s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/rviz/display.rviz
+[3.201s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/meshes
+[3.201s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/meshes/Caster_1.STL
+[3.201s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/meshes/Caster_4.STL
+[3.201s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/meshes/Right_wheel.STL
+[3.202s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/meshes/base_link.STL
+[3.202s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/meshes/Left_wheel.STL
+[3.202s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/meshes/Empty_Link4.STL
+[3.202s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/meshes/Empty_Link2.STL
+[3.213s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/meshes/Empty_Link3.STL
+[3.214s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/meshes/armlink1.STL
+[3.214s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/meshes/Caster_3.STL
+[3.214s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/meshes/Caster_2.STL
+[3.214s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/meshes/Empty_Link.STL
+[3.214s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/meshes/armlink2.STL
+[3.214s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/worlds
+[3.216s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/worlds/empty.world
+[3.217s] -- Installing: /home/mohamed/mobile_ws/install/assem1_description/share/ament_index/resource_index/package_run_dependencies/assem1_description
+[3.217s] -- Installing: /home/mohamed/mobile_ws/install/assem1_description/share/ament_index/resource_index/parent_prefix_path/assem1_description
+[3.222s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/environment/ament_prefix_path.sh
+[3.223s] -- Installing: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/environment/ament_prefix_path.dsv
+[3.223s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/environment/path.sh
+[3.223s] -- Installing: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/environment/path.dsv
+[3.223s] -- Installing: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/local_setup.bash
+[3.224s] -- Installing: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/local_setup.sh
+[3.224s] -- Installing: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/local_setup.zsh
+[3.224s] -- Installing: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/local_setup.dsv
+[3.224s] -- Installing: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/package.dsv
+[3.229s] -- Installing: /home/mohamed/mobile_ws/install/assem1_description/share/ament_index/resource_index/packages/assem1_description
+[3.229s] -- Installing: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/cmake/assem1_descriptionConfig.cmake
+[3.229s] -- Installing: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/cmake/assem1_descriptionConfig-version.cmake
+[3.229s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/package.xml
+[3.230s] Invoked command in '/home/mohamed/mobile_ws/build/assem1_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake --install /home/mohamed/mobile_ws/build/assem1_description

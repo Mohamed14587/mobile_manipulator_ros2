@@ -1,0 +1,9 @@
+/home/mohamed/mobile_ws/build/assem1_controller/CMakeFiles/uninstall.dir
+/home/mohamed/mobile_ws/build/assem1_controller/CMakeFiles/assem1_controller_uninstall.dir
+/home/mohamed/mobile_ws/build/assem1_controller/CMakeFiles/test.dir
+/home/mohamed/mobile_ws/build/assem1_controller/CMakeFiles/edit_cache.dir
+/home/mohamed/mobile_ws/build/assem1_controller/CMakeFiles/rebuild_cache.dir
+/home/mohamed/mobile_ws/build/assem1_controller/CMakeFiles/list_install_components.dir
+/home/mohamed/mobile_ws/build/assem1_controller/CMakeFiles/install.dir
+/home/mohamed/mobile_ws/build/assem1_controller/CMakeFiles/install/local.dir
+/home/mohamed/mobile_ws/build/assem1_controller/CMakeFiles/install/strip.dir

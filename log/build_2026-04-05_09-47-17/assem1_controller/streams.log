@@ -1,0 +1,49 @@
+[0.026s] Invoking command in '/home/mohamed/mobile_ws/build/assem1_controller': CMAKE_PREFIX_PATH=/home/mohamed/mobile_ws/install/assem1_description:/home/mohamed/mobile_ws/install/assem1_controller:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake /home/mohamed/mobile_ws/src/assem1_controller -DCMAKE_INSTALL_PREFIX=/home/mohamed/mobile_ws/install/assem1_controller
+[0.203s] -- The C compiler identification is GNU 11.4.0
+[0.441s] -- The CXX compiler identification is GNU 11.4.0
+[0.489s] -- Detecting C compiler ABI info
+[0.730s] -- Detecting C compiler ABI info - done
+[0.757s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.757s] -- Detecting C compile features
+[0.761s] -- Detecting C compile features - done
+[0.765s] -- Detecting CXX compiler ABI info
+[1.160s] -- Detecting CXX compiler ABI info - done
+[1.245s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.245s] -- Detecting CXX compile features
+[1.253s] -- Detecting CXX compile features - done
+[1.276s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.451s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.837s] -- Found rclpy: 3.3.21 (/opt/ros/humble/share/rclpy/cmake)
+[3.000s] -- Configuring done
+[3.006s] -- Generating done
+[3.012s] -- Build files have been written to: /home/mohamed/mobile_ws/build/assem1_controller
+[3.022s] Invoked command in '/home/mohamed/mobile_ws/build/assem1_controller' returned '0': CMAKE_PREFIX_PATH=/home/mohamed/mobile_ws/install/assem1_description:/home/mohamed/mobile_ws/install/assem1_controller:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake /home/mohamed/mobile_ws/src/assem1_controller -DCMAKE_INSTALL_PREFIX=/home/mohamed/mobile_ws/install/assem1_controller
+[3.026s] Invoking command in '/home/mohamed/mobile_ws/build/assem1_controller': CMAKE_PREFIX_PATH=/home/mohamed/mobile_ws/install/assem1_description:/home/mohamed/mobile_ws/install/assem1_controller:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake --build /home/mohamed/mobile_ws/build/assem1_controller -- -j2 -l2
+[3.101s] Invoked command in '/home/mohamed/mobile_ws/build/assem1_controller' returned '0': CMAKE_PREFIX_PATH=/home/mohamed/mobile_ws/install/assem1_description:/home/mohamed/mobile_ws/install/assem1_controller:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake --build /home/mohamed/mobile_ws/build/assem1_controller -- -j2 -l2
+[3.105s] Invoking command in '/home/mohamed/mobile_ws/build/assem1_controller': CMAKE_PREFIX_PATH=/home/mohamed/mobile_ws/install/assem1_description:/home/mohamed/mobile_ws/install/assem1_controller:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake --install /home/mohamed/mobile_ws/build/assem1_controller
+[3.120s] -- Install configuration: ""
+[3.120s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_controller/lib/python3.10/site-packages/assem1_controller
+[3.122s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_controller/lib/python3.10/site-packages/assem1_controller/slider_controller.py
+[3.122s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_controller/lib/python3.10/site-packages/assem1_controller/__init__.py
+[3.122s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/launch
+[3.122s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/launch/slider_controller.launch.py
+[3.123s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/launch/controller.launch.py
+[3.123s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/config
+[3.123s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/config/assem1_controllers.yaml
+[3.123s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_controller/lib/assem1_controller/slider_controller.py
+[3.123s] -- Installing: /home/mohamed/mobile_ws/install/assem1_controller/share/ament_index/resource_index/package_run_dependencies/assem1_controller
+[3.123s] -- Installing: /home/mohamed/mobile_ws/install/assem1_controller/share/ament_index/resource_index/parent_prefix_path/assem1_controller
+[3.124s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/environment/ament_prefix_path.sh
+[3.124s] -- Installing: /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/environment/ament_prefix_path.dsv
+[3.124s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/environment/path.sh
+[3.124s] -- Installing: /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/environment/path.dsv
+[3.124s] -- Installing: /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/local_setup.bash
+[3.131s] -- Installing: /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/local_setup.sh
+[3.131s] -- Installing: /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/local_setup.zsh
+[3.131s] -- Installing: /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/local_setup.dsv
+[3.131s] -- Installing: /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/package.dsv
+[3.131s] -- Installing: /home/mohamed/mobile_ws/install/assem1_controller/share/ament_index/resource_index/packages/assem1_controller
+[3.132s] -- Installing: /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/cmake/assem1_controllerConfig.cmake
+[3.132s] -- Installing: /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/cmake/assem1_controllerConfig-version.cmake
+[3.132s] -- Up-to-date: /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/package.xml
+[3.132s] Invoked command in '/home/mohamed/mobile_ws/build/assem1_controller' returned '0': CMAKE_PREFIX_PATH=/home/mohamed/mobile_ws/install/assem1_description:/home/mohamed/mobile_ws/install/assem1_controller:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake --install /home/mohamed/mobile_ws/build/assem1_controller

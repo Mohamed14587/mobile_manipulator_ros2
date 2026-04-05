@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot name="assem1_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- مهم جدًا -->
+  <xacro:property name="pkg_name" value="assem1_description"/>
+
+  <!-- includes -->
+  <xacro:include filename="$(find assem1_description)/urdf/mobile_manipulator.xacro" />
+  <xacro:include filename="$(find assem1_description)/urdf/sensors.xacro" />
+  <xacro:include filename="$(find assem1_description)/urdf/gazebo.xacro" />
+  <xacro:include filename="$(find assem1_description)/urdf/ros2_control.xacro" />
+    
+</robot>

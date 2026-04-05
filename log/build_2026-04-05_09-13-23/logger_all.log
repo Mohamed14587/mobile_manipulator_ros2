@@ -1,0 +1,270 @@
+[0.250s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.250s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=2, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x74d51746ac50>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x74d51746a680>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x74d51746a680>>, mixin_verb=('build',))
+[1.050s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.050s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.050s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.050s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.050s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.051s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.051s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/mohamed/mobile_ws'
+[1.051s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.052s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.052s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.052s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.052s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.052s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.053s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.053s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.053s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.097s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.097s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.097s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.097s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.097s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.098s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.098s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.098s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.099s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.099s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.099s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.100s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.100s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.100s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.100s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.101s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.101s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.101s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.101s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.101s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.101s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.102s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.102s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.102s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.102s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.102s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.102s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.102s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_controller) by extensions ['ignore', 'ignore_ament_install']
+[1.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_controller) by extension 'ignore'
+[1.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_controller) by extension 'ignore_ament_install'
+[1.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_controller) by extensions ['colcon_pkg']
+[1.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_controller) by extension 'colcon_pkg'
+[1.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_controller) by extensions ['colcon_meta']
+[1.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_controller) by extension 'colcon_meta'
+[1.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_controller) by extensions ['ros']
+[1.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_controller) by extension 'ros'
+[1.113s] DEBUG:colcon.colcon_core.package_identification:Package 'src/assem1_controller' with type 'ros.ament_cmake' and name 'assem1_controller'
+[1.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_description) by extensions ['ignore', 'ignore_ament_install']
+[1.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_description) by extension 'ignore'
+[1.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_description) by extension 'ignore_ament_install'
+[1.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_description) by extensions ['colcon_pkg']
+[1.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_description) by extension 'colcon_pkg'
+[1.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_description) by extensions ['colcon_meta']
+[1.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_description) by extension 'colcon_meta'
+[1.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_description) by extensions ['ros']
+[1.116s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_description) by extension 'ros'
+[1.120s] DEBUG:colcon.colcon_core.package_identification:Package 'src/assem1_description' with type 'ros.ament_cmake' and name 'assem1_description'
+[1.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_vision) by extensions ['ignore', 'ignore_ament_install']
+[1.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_vision) by extension 'ignore'
+[1.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_vision) by extension 'ignore_ament_install'
+[1.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_vision) by extensions ['colcon_pkg']
+[1.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_vision) by extension 'colcon_pkg'
+[1.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_vision) by extensions ['colcon_meta']
+[1.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_vision) by extension 'colcon_meta'
+[1.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_vision) by extensions ['ros']
+[1.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/assem1_vision) by extension 'ros'
+[1.126s] DEBUG:colcon.colcon_core.package_identification:Package 'src/assem1_vision' with type 'ros.ament_python' and name 'assem1_vision'
+[1.126s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.127s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.127s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.127s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.127s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.237s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.237s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.242s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/mohamed/mobile_ws/install/assem1_vision' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[1.243s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/mohamed/mobile_ws/install/assem1_controller' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[1.243s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/mohamed/mobile_ws/install/assem1_description' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[1.243s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/mohamed/mobile_ws/install/assem1_controller' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[1.244s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/mohamed/mobile_ws/install/assem1_description' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[1.246s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/mohamed/mobile_ws/install
+[1.251s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 428 installed packages in /opt/ros/humble
+[1.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.540s] Level 5:colcon.colcon_core.verb:set package 'assem1_description' build argument 'cmake_args' from command line to 'None'
+[1.540s] Level 5:colcon.colcon_core.verb:set package 'assem1_description' build argument 'cmake_target' from command line to 'None'
+[1.541s] Level 5:colcon.colcon_core.verb:set package 'assem1_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.541s] Level 5:colcon.colcon_core.verb:set package 'assem1_description' build argument 'cmake_clean_cache' from command line to 'False'
+[1.541s] Level 5:colcon.colcon_core.verb:set package 'assem1_description' build argument 'cmake_clean_first' from command line to 'False'
+[1.541s] Level 5:colcon.colcon_core.verb:set package 'assem1_description' build argument 'cmake_force_configure' from command line to 'False'
+[1.541s] Level 5:colcon.colcon_core.verb:set package 'assem1_description' build argument 'ament_cmake_args' from command line to 'None'
+[1.543s] Level 5:colcon.colcon_core.verb:set package 'assem1_description' build argument 'catkin_cmake_args' from command line to 'None'
+[1.543s] Level 5:colcon.colcon_core.verb:set package 'assem1_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.543s] DEBUG:colcon.colcon_core.verb:Building package 'assem1_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mohamed/mobile_ws/build/assem1_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mohamed/mobile_ws/install/assem1_description', 'merge_install': False, 'path': '/home/mohamed/mobile_ws/src/assem1_description', 'symlink_install': False, 'test_result_base': None}
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'assem1_vision' build argument 'cmake_args' from command line to 'None'
+[1.545s] Level 5:colcon.colcon_core.verb:set package 'assem1_vision' build argument 'cmake_target' from command line to 'None'
+[1.545s] Level 5:colcon.colcon_core.verb:set package 'assem1_vision' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.545s] Level 5:colcon.colcon_core.verb:set package 'assem1_vision' build argument 'cmake_clean_cache' from command line to 'False'
+[1.545s] Level 5:colcon.colcon_core.verb:set package 'assem1_vision' build argument 'cmake_clean_first' from command line to 'False'
+[1.545s] Level 5:colcon.colcon_core.verb:set package 'assem1_vision' build argument 'cmake_force_configure' from command line to 'False'
+[1.545s] Level 5:colcon.colcon_core.verb:set package 'assem1_vision' build argument 'ament_cmake_args' from command line to 'None'
+[1.546s] Level 5:colcon.colcon_core.verb:set package 'assem1_vision' build argument 'catkin_cmake_args' from command line to 'None'
+[1.546s] Level 5:colcon.colcon_core.verb:set package 'assem1_vision' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.546s] DEBUG:colcon.colcon_core.verb:Building package 'assem1_vision' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mohamed/mobile_ws/build/assem1_vision', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mohamed/mobile_ws/install/assem1_vision', 'merge_install': False, 'path': '/home/mohamed/mobile_ws/src/assem1_vision', 'symlink_install': False, 'test_result_base': None}
+[1.547s] Level 5:colcon.colcon_core.verb:set package 'assem1_controller' build argument 'cmake_args' from command line to 'None'
+[1.548s] Level 5:colcon.colcon_core.verb:set package 'assem1_controller' build argument 'cmake_target' from command line to 'None'
+[1.548s] Level 5:colcon.colcon_core.verb:set package 'assem1_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.548s] Level 5:colcon.colcon_core.verb:set package 'assem1_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[1.548s] Level 5:colcon.colcon_core.verb:set package 'assem1_controller' build argument 'cmake_clean_first' from command line to 'False'
+[1.548s] Level 5:colcon.colcon_core.verb:set package 'assem1_controller' build argument 'cmake_force_configure' from command line to 'False'
+[1.548s] Level 5:colcon.colcon_core.verb:set package 'assem1_controller' build argument 'ament_cmake_args' from command line to 'None'
+[1.548s] Level 5:colcon.colcon_core.verb:set package 'assem1_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[1.549s] Level 5:colcon.colcon_core.verb:set package 'assem1_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.549s] DEBUG:colcon.colcon_core.verb:Building package 'assem1_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mohamed/mobile_ws/build/assem1_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mohamed/mobile_ws/install/assem1_controller', 'merge_install': False, 'path': '/home/mohamed/mobile_ws/src/assem1_controller', 'symlink_install': False, 'test_result_base': None}
+[1.549s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.559s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.560s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mohamed/mobile_ws/src/assem1_description' with build type 'ament_cmake'
+[1.560s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mohamed/mobile_ws/src/assem1_description'
+[1.575s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.579s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.579s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.615s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/mohamed/mobile_ws/src/assem1_vision' with build type 'ament_python'
+[1.615s] Level 1:colcon.colcon_core.shell:create_environment_hook('assem1_vision', 'ament_prefix_path')
+[1.618s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohamed/mobile_ws/install/assem1_vision/share/assem1_vision/hook/ament_prefix_path.ps1'
+[1.627s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mohamed/mobile_ws/install/assem1_vision/share/assem1_vision/hook/ament_prefix_path.dsv'
+[1.631s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohamed/mobile_ws/install/assem1_vision/share/assem1_vision/hook/ament_prefix_path.sh'
+[1.640s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.641s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.699s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mohamed/mobile_ws/build/assem1_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake /home/mohamed/mobile_ws/src/assem1_description -DCMAKE_INSTALL_PREFIX=/home/mohamed/mobile_ws/install/assem1_description
+[5.226s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/mohamed/mobile_ws/src/assem1_vision'
+[5.231s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.232s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.504s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mohamed/mobile_ws/build/assem1_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake /home/mohamed/mobile_ws/src/assem1_description -DCMAKE_INSTALL_PREFIX=/home/mohamed/mobile_ws/install/assem1_description
+[8.506s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mohamed/mobile_ws/build/assem1_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake --build /home/mohamed/mobile_ws/build/assem1_description -- -j2 -l2
+[8.820s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mohamed/mobile_ws/build/assem1_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake --build /home/mohamed/mobile_ws/build/assem1_description -- -j2 -l2
+[8.863s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mohamed/mobile_ws/build/assem1_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake --install /home/mohamed/mobile_ws/build/assem1_description
+[9.197s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mohamed/mobile_ws/src/assem1_vision': PYTHONPATH=/home/mohamed/mobile_ws/build/assem1_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohamed/mobile_ws/install/assem1_vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/assem1_vision build --build-base /home/mohamed/mobile_ws/build/assem1_vision/build install --record /home/mohamed/mobile_ws/build/assem1_vision/install.log --single-version-externally-managed install_data
+[9.399s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(assem1_description)
+[9.404s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mohamed/mobile_ws/build/assem1_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake --install /home/mohamed/mobile_ws/build/assem1_description
+[9.426s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_description' for CMake module files
+[9.432s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_description' for CMake config files
+[9.433s] Level 1:colcon.colcon_core.shell:create_environment_hook('assem1_description', 'cmake_prefix_path')
+[9.437s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/hook/cmake_prefix_path.ps1'
+[9.442s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/hook/cmake_prefix_path.dsv'
+[9.445s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/hook/cmake_prefix_path.sh'
+[9.451s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_description/bin'
+[9.452s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_description/lib/pkgconfig/assem1_description.pc'
+[9.453s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_description/lib/python3.10/site-packages'
+[9.457s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_description/bin'
+[9.460s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/package.ps1'
+[9.472s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/package.dsv'
+[9.479s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/package.sh'
+[9.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/package.bash'
+[9.493s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/package.zsh'
+[9.497s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mohamed/mobile_ws/install/assem1_description/share/colcon-core/packages/assem1_description)
+[9.507s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(assem1_description)
+[9.508s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_description' for CMake module files
+[9.512s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_description' for CMake config files
+[9.515s] Level 1:colcon.colcon_core.shell:create_environment_hook('assem1_description', 'cmake_prefix_path')
+[9.516s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/hook/cmake_prefix_path.ps1'
+[9.521s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/hook/cmake_prefix_path.dsv'
+[9.529s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/hook/cmake_prefix_path.sh'
+[9.536s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_description/bin'
+[9.540s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_description/lib/pkgconfig/assem1_description.pc'
+[9.541s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_description/lib/python3.10/site-packages'
+[9.549s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_description/bin'
+[9.554s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/package.ps1'
+[9.564s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/package.dsv'
+[9.572s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/package.sh'
+[9.583s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/package.bash'
+[9.590s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_description/share/assem1_description/package.zsh'
+[9.596s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mohamed/mobile_ws/install/assem1_description/share/colcon-core/packages/assem1_description)
+[9.602s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mohamed/mobile_ws/src/assem1_controller' with build type 'ament_cmake'
+[9.603s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mohamed/mobile_ws/src/assem1_controller'
+[9.608s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.612s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.713s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mohamed/mobile_ws/build/assem1_controller': CMAKE_PREFIX_PATH=/home/mohamed/mobile_ws/install/assem1_description:/home/mohamed/mobile_ws/install/assem1_controller:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake /home/mohamed/mobile_ws/src/assem1_controller -DCMAKE_INSTALL_PREFIX=/home/mohamed/mobile_ws/install/assem1_controller
+[13.210s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_vision' for CMake module files
+[13.213s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mohamed/mobile_ws/src/assem1_vision' returned '0': PYTHONPATH=/home/mohamed/mobile_ws/build/assem1_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohamed/mobile_ws/install/assem1_vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/assem1_vision build --build-base /home/mohamed/mobile_ws/build/assem1_vision/build install --record /home/mohamed/mobile_ws/build/assem1_vision/install.log --single-version-externally-managed install_data
+[13.213s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_vision' for CMake config files
+[13.218s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_vision/lib'
+[13.219s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_vision/bin'
+[13.219s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_vision/lib/pkgconfig/assem1_vision.pc'
+[13.225s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_vision/lib/python3.10/site-packages'
+[13.226s] Level 1:colcon.colcon_core.shell:create_environment_hook('assem1_vision', 'pythonpath')
+[13.226s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohamed/mobile_ws/install/assem1_vision/share/assem1_vision/hook/pythonpath.ps1'
+[13.231s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mohamed/mobile_ws/install/assem1_vision/share/assem1_vision/hook/pythonpath.dsv'
+[13.237s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohamed/mobile_ws/install/assem1_vision/share/assem1_vision/hook/pythonpath.sh'
+[13.243s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_vision/bin'
+[13.247s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(assem1_vision)
+[13.248s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_vision/share/assem1_vision/package.ps1'
+[13.254s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mohamed/mobile_ws/install/assem1_vision/share/assem1_vision/package.dsv'
+[13.259s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_vision/share/assem1_vision/package.sh'
+[13.263s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_vision/share/assem1_vision/package.bash'
+[13.270s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_vision/share/assem1_vision/package.zsh'
+[13.278s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mohamed/mobile_ws/install/assem1_vision/share/colcon-core/packages/assem1_vision)
+[14.471s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mohamed/mobile_ws/build/assem1_controller' returned '0': CMAKE_PREFIX_PATH=/home/mohamed/mobile_ws/install/assem1_description:/home/mohamed/mobile_ws/install/assem1_controller:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake /home/mohamed/mobile_ws/src/assem1_controller -DCMAKE_INSTALL_PREFIX=/home/mohamed/mobile_ws/install/assem1_controller
+[14.479s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mohamed/mobile_ws/build/assem1_controller': CMAKE_PREFIX_PATH=/home/mohamed/mobile_ws/install/assem1_description:/home/mohamed/mobile_ws/install/assem1_controller:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake --build /home/mohamed/mobile_ws/build/assem1_controller -- -j2 -l2
+[14.664s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mohamed/mobile_ws/build/assem1_controller' returned '0': CMAKE_PREFIX_PATH=/home/mohamed/mobile_ws/install/assem1_description:/home/mohamed/mobile_ws/install/assem1_controller:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake --build /home/mohamed/mobile_ws/build/assem1_controller -- -j2 -l2
+[14.669s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mohamed/mobile_ws/build/assem1_controller': CMAKE_PREFIX_PATH=/home/mohamed/mobile_ws/install/assem1_description:/home/mohamed/mobile_ws/install/assem1_controller:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake --install /home/mohamed/mobile_ws/build/assem1_controller
+[14.787s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(assem1_controller)
+[14.788s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_controller' for CMake module files
+[14.789s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mohamed/mobile_ws/build/assem1_controller' returned '0': CMAKE_PREFIX_PATH=/home/mohamed/mobile_ws/install/assem1_description:/home/mohamed/mobile_ws/install/assem1_controller:/home/mohamed/mobile_ws/install/assem1_vision:/opt/ros/humble /usr/bin/cmake --install /home/mohamed/mobile_ws/build/assem1_controller
+[14.791s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_controller' for CMake config files
+[14.793s] Level 1:colcon.colcon_core.shell:create_environment_hook('assem1_controller', 'cmake_prefix_path')
+[14.794s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/hook/cmake_prefix_path.ps1'
+[14.797s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/hook/cmake_prefix_path.dsv'
+[14.800s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/hook/cmake_prefix_path.sh'
+[14.803s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_controller/lib'
+[14.803s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_controller/bin'
+[14.804s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_controller/lib/pkgconfig/assem1_controller.pc'
+[14.806s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_controller/lib/python3.10/site-packages'
+[14.806s] Level 1:colcon.colcon_core.shell:create_environment_hook('assem1_controller', 'pythonpath')
+[14.807s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/hook/pythonpath.ps1'
+[14.809s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/hook/pythonpath.dsv'
+[14.812s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/hook/pythonpath.sh'
+[14.817s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_controller/bin'
+[14.820s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/package.ps1'
+[14.825s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/package.dsv'
+[14.829s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/package.sh'
+[14.832s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/package.bash'
+[14.834s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/package.zsh'
+[14.836s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mohamed/mobile_ws/install/assem1_controller/share/colcon-core/packages/assem1_controller)
+[14.841s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(assem1_controller)
+[14.841s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_controller' for CMake module files
+[14.846s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_controller' for CMake config files
+[14.847s] Level 1:colcon.colcon_core.shell:create_environment_hook('assem1_controller', 'cmake_prefix_path')
+[14.848s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/hook/cmake_prefix_path.ps1'
+[14.851s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/hook/cmake_prefix_path.dsv'
+[14.855s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/hook/cmake_prefix_path.sh'
+[14.858s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_controller/lib'
+[14.859s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_controller/bin'
+[14.859s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_controller/lib/pkgconfig/assem1_controller.pc'
+[14.861s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_controller/lib/python3.10/site-packages'
+[14.862s] Level 1:colcon.colcon_core.shell:create_environment_hook('assem1_controller', 'pythonpath')
+[14.864s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/hook/pythonpath.ps1'
+[14.866s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/hook/pythonpath.dsv'
+[14.868s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/hook/pythonpath.sh'
+[14.874s] Level 1:colcon.colcon_core.environment:checking '/home/mohamed/mobile_ws/install/assem1_controller/bin'
+[14.877s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/package.ps1'
+[14.881s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/package.dsv'
+[14.885s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/package.sh'
+[14.888s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/package.bash'
+[14.891s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/package.zsh'
+[14.895s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mohamed/mobile_ws/install/assem1_controller/share/colcon-core/packages/assem1_controller)
+[14.896s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[14.901s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[14.901s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[14.901s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[14.927s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[14.927s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[14.928s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[15.038s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[15.039s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mohamed/mobile_ws/install/local_setup.ps1'
+[15.046s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mohamed/mobile_ws/install/_local_setup_util_ps1.py'
+[15.056s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mohamed/mobile_ws/install/setup.ps1'
+[15.064s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mohamed/mobile_ws/install/local_setup.sh'
+[15.068s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mohamed/mobile_ws/install/_local_setup_util_sh.py'
+[15.072s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mohamed/mobile_ws/install/setup.sh'
+[15.080s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mohamed/mobile_ws/install/local_setup.bash'
+[15.084s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mohamed/mobile_ws/install/setup.bash'
+[15.092s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mohamed/mobile_ws/install/local_setup.zsh'
+[15.096s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mohamed/mobile_ws/install/setup.zsh'

@@ -1,0 +1,3 @@
+[console_scripts]
+color_sorter = assem1_vision.color_sorter_node:main
+
