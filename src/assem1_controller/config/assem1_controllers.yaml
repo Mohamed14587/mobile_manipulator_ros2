@@ -11,8 +11,8 @@ controller_manager:
 arm_controller:
   ros__parameters:
     joints:
-      - armlinl1
-      - armlinl2
+    - joint_1
+    - joint_2
 
     command_interfaces:
       - position

@@ -1,5 +1,3 @@
-/home/mohamed/mobile_ws/install/assem1_controller/lib/python3.10/site-packages/assem1_controller/slider_controller.py
-/home/mohamed/mobile_ws/install/assem1_controller/lib/python3.10/site-packages/assem1_controller/__init__.py
 /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/launch/slider_controller.launch.py
 /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/launch/controller.launch.py
 /home/mohamed/mobile_ws/install/assem1_controller/share/assem1_controller/config/assem1_controllers.yaml

@@ -1,12 +1,11 @@
-import os
-from setuptools import setup
+from setuptools import find_packages, setup
 
 package_name = 'assem1_vision'
 
 setup(
     name=package_name,
     version='0.0.0',
-    packages=[package_name],
+    packages=find_packages(exclude=['test']),
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
@@ -15,13 +14,11 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='mohamed',
-    maintainer_email='your_email@example.com',
-    description='Vision package for assem1 robot',
-    license='TODO: License declaration',
-    tests_require=['pytest'],
+    description='Vision package',
+    license='MIT',
     entry_points={
         'console_scripts': [
-            'color_sorter = assem1_vision.color_sorter_node:main'
+            'color_detector = assem1_vision.color_detector:main',
         ],
     },
 )

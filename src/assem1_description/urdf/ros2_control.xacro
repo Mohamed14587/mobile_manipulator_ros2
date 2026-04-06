@@ -17,7 +17,7 @@
       </hardware>
     </xacro:unless>
 
-    <joint name="armlinl1">
+    <joint name="joint_1">
       <command_interface name="position">
         <param name="min">-3.1416</param>
         <param name="max">3.1416</param>
@@ -26,7 +26,7 @@
       <state_interface name="velocity"/>
     </joint>
 
-    <joint name="armlinl2">
+    <joint name="joint_2">
       <command_interface name="position">
         <param name="min">-3.1416</param>
         <param name="max">3.1416</param>

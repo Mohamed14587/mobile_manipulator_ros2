@@ -25,7 +25,9 @@ class SliderController(Node):
     def sliderCallback(self, msg):
         if len(msg.position) >= 2:
             arm_msg = JointTrajectory()
-            arm_msg.joint_names = ['armlinl1', 'armlinl2'] 
+            
+            # ✅ الاسم الصح
+            arm_msg.joint_names = ['joint_1', 'joint_2']
             
             arm_goal = JointTrajectoryPoint()
             arm_goal.positions = [msg.position[0], msg.position[1]]
