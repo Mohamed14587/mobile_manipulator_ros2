@@ -1,3 +1,0 @@
-[console_scripts]
-color_detector = assem1_vision.color_detector:main
-
