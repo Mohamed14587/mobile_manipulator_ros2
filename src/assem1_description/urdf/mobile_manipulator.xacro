@@ -87,6 +87,27 @@
     </collision>
   </link>
 
+  <!-- ================= end effector ============ -->
+  <link name="tool_link">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+
+    <visual>
+      <geometry>
+        <cylinder radius="0.028" length="0.0097" />
+      </geometry>
+      <material name="base_color"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <cylinder radius="0.028" length="0.0097" />
+      </geometry>
+    </collision>
+  </link>
   <!-- ================= JOINT 1 ================= -->
   <joint name="joint_1" type="revolute">
     <origin xyz="0 0.07 0.5" rpy="0 0 0"/>
@@ -104,5 +125,13 @@
     <axis xyz="0 0 1"/>
     <limit lower="-${PI}" upper="${PI}" effort="100" velocity="3"/>
   </joint>
+
+  <!-- ================= JOINT 3 ================= -->
+  <joint name="tool_joint" type="fixed">
+    <origin xyz="0 -0.165 -0.107" rpy="0 0 0"/>
+    <parent link="arm_link2"/>
+    <child link="tool_link"/>
+  </joint>
+
 
 </robot>
