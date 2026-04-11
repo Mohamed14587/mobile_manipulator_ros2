@@ -1,34 +1,34 @@
 #!/usr/bin/env python3
 import os
-os.environ["QT_QPA_PLATFORM"] = "xcb"   # 🔥 حل مشكلة GUI
+os.environ["QT_QPA_PLATFORM"] = "xcb"
 
 import rclpy
 from rclpy.node import Node
 from rclpy.duration import Duration
+
 import cv2
 import numpy as np
+
 from sensor_msgs.msg import Image
 from std_msgs.msg import String
 from cv_bridge import CvBridge
+
 import tf2_ros
-import tf_transformations
+from scipy.spatial.transform import Rotation as R
+
 
 class ColorDetector(Node):
     def __init__(self):
         super().__init__('color_detector')
 
-        # Subscriber
         self.image_sub = self.create_subscription(
             Image, '/camera/image_raw', self.image_callback, 10)
 
-        # Publisher
         self.coords_pub = self.create_publisher(
             String, '/color_coordinates', 10)
 
-        # OpenCV
         self.bridge = CvBridge()
 
-        # TF2
         self.tf_buffer = tf2_ros.Buffer()
         self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
 
@@ -38,7 +38,7 @@ class ColorDetector(Node):
         self.cx = 320.0
         self.cy = 160.0
 
-        self.get_logger().info("Color Detector Started (GUI + TF working)")
+        self.get_logger().info("🔥 Color Detector (SCIPY VERSION)")
 
     def image_callback(self, msg):
         try:
@@ -58,20 +58,30 @@ class ColorDetector(Node):
         for color_id, (lower, upper) in color_ranges.items():
             mask = cv2.inRange(hsv, np.array(lower), np.array(upper))
 
-            mask = cv2.erode(mask, None, iterations=2)
-            mask = cv2.dilate(mask, None, iterations=2)
+            kernel = np.ones((5,5), np.uint8)
+            mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
 
             contours,_ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
             for cnt in contours:
-                if cv2.contourArea(cnt) > 50:
-                    x,y,w,h = cv2.boundingRect(cnt)
-                    cx_pix, cy_pix = x+w//2, y+h//2
+                if cv2.contourArea(cnt) > 100:
 
-                    # رسم
-                    cv2.rectangle(frame,(x,y),(x+w,y+h),(0,255,255),2)
-                    cv2.putText(frame,color_id,(x,y-10),
-                                cv2.FONT_HERSHEY_SIMPLEX,0.6,(0,255,255),2)
+                    # 🔥 Rotated box
+                    rect = cv2.minAreaRect(cnt)
+                    box = cv2.boxPoints(rect)
+                    box = np.intp(box)
+
+                    cx_pix = int(rect[0][0])
+                    cy_pix = int(rect[0][1])
+                    angle = rect[2]
+
+                    cv2.drawContours(frame, [box], 0, (0,255,255), 2)
+                    cv2.circle(frame, (cx_pix, cy_pix), 5, (255,0,0), -1)
+
+                    cv2.putText(frame, f"{color_id}",
+                                (cx_pix-20, cy_pix-20),
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.6,
+                                (0,255,255), 2)
 
                     # pixel → camera
                     Z = 0.1
@@ -79,9 +89,8 @@ class ColorDetector(Node):
                     X = (cy_pix - self.cy) * Z / self.fy
 
                     try:
-                        # 🔥 هنا التعديل المهم
                         t = self.tf_buffer.lookup_transform(
-                            "base_link",      # ✅ بدل panda_link0
+                            "base_link",
                             "camera_link",
                             rclpy.time.Time(),
                             timeout=Duration(seconds=1.0))
@@ -92,20 +101,24 @@ class ColorDetector(Node):
                             t.transform.translation.z
                         ])
 
-                        rot = [
+                        quat = [
                             t.transform.rotation.x,
                             t.transform.rotation.y,
                             t.transform.rotation.z,
                             t.transform.rotation.w
                         ]
 
-                        T = tf_transformations.quaternion_matrix(rot)
+                        # 🔥 Scipy transform
+                        rot_matrix = R.from_quat(quat).as_matrix()
+
+                        T = np.eye(4)
+                        T[:3,:3] = rot_matrix
                         T[:3,3] = trans
 
-                        pt_cam = np.array([X,Y,Z,1.0])
+                        pt_cam = np.array([X, Y, Z, 1.0])
                         pt_base = T @ pt_cam
 
-                        msg_str = f"{color_id},{pt_base[0]:.3f},{pt_base[1]:.3f},{pt_base[2]:.3f}"
+                        msg_str = f"{color_id},{pt_base[0]:.3f},{pt_base[1]:.3f},{pt_base[2]:.3f},{angle:.2f}"
                         self.coords_pub.publish(String(data=msg_str))
 
                         self.get_logger().info(msg_str)
@@ -113,19 +126,17 @@ class ColorDetector(Node):
                     except Exception as e:
                         self.get_logger().warn(f"TF failed: {e}")
 
-        # GUI
         try:
-            cv2.namedWindow("Color Detection", cv2.WINDOW_NORMAL)
-            cv2.resizeWindow("Color Detection", 640, 320)
             cv2.imshow("Color Detection", frame)
             cv2.waitKey(1)
         except Exception as e:
-            self.get_logger().warn(f"OpenCV GUI error: {e}")
+            self.get_logger().warn(f"GUI error: {e}")
 
 
 def main(args=None):
     rclpy.init(args=args)
     node = ColorDetector()
+
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
