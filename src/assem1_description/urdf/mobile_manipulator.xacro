@@ -2,136 +2,67 @@
 <robot name="assem1_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <xacro:property name="pkg_name" value="assem1_description"/>
-  <xacro:property name="PI" value="3.1415926535897931"/>
 
-  <!-- ================= MATERIALS ================= -->
-  <material name="base_color">
-    <color rgba="0.776 0.757 0.737 1"/>
-  </material>
+  <material name="base_color"><color rgba="0.776 0.757 0.737 1"/></material>
+  <material name="arm_red"><color rgba="0.988 0.082 0 1"/></material>
 
-  <material name="arm_red">
-    <color rgba="0.988 0.082 0 1"/>
-  </material>
-
-  <!-- ================ worlds   ==================== -->
   <link name="world" />
-
   <joint name="world_to_base_joint" type="fixed">
-    <parent link="world" />
-    <child link="base_link" />
+    <parent link="world" /><child link="base_link" />
     <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
-  <!-- ================= BASE LINK ================= -->
+
   <link name="base_link">
     <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="10"/>
-      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+      <origin xyz="0 0 0.2" rpy="0 0 0"/><mass value="36.0"/><inertia ixx="1.0" ixy="0" ixz="0" iyy="1.0" iyz="0" izz="1.0"/>
     </inertial>
-
     <visual>
-      <geometry>
-        <mesh filename="package://${pkg_name}/meshes/base_link.STL"/>
-      </geometry>
+      <geometry><mesh filename="package://${pkg_name}/meshes/base_link.STL"/></geometry>
       <material name="base_color"/>
     </visual>
-
     <collision>
-      <geometry>
-        <mesh filename="package://${pkg_name}/meshes/base_link.STL"/>
-      </geometry>
+      <geometry><mesh filename="package://${pkg_name}/meshes/base_link.STL"/></geometry>
     </collision>
   </link>
 
-  <!-- ================= ARM LINK 1 ================= -->
-  <link name="arm_link1">
+  <link name="armlink1">
     <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/><mass value="1.0"/><inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
     </inertial>
-
     <visual>
-      <geometry>
-        <mesh filename="package://${pkg_name}/meshes/armlink1.STL"/>
-      </geometry>
+      <geometry><mesh filename="package://${pkg_name}/meshes/armlink1.STL"/></geometry>
       <material name="arm_red"/>
     </visual>
-
     <collision>
-      <geometry>
-        <mesh filename="package://${pkg_name}/meshes/armlink1.STL"/>
-      </geometry>
+      <geometry><mesh filename="package://${pkg_name}/meshes/armlink1.STL"/></geometry>
     </collision>
   </link>
 
-  <!-- ================= ARM LINK 2 ================= -->
-  <link name="arm_link2">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
-    </inertial>
-
-    <visual>
-      <geometry>
-        <mesh filename="package://${pkg_name}/meshes/armlink2.STL"/>
-      </geometry>
-      <material name="arm_red"/>
-    </visual>
-
-    <collision>
-      <geometry>
-        <mesh filename="package://${pkg_name}/meshes/armlink2.STL"/>
-      </geometry>
-    </collision>
-  </link>
-
-  <!-- ================= end effector ============ -->
-  <link name="tool_link">
-    <inertial>
-      <mass value="0.1"/>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
-    </inertial>
-
-    <visual>
-      <geometry>
-        <cylinder radius="0.028" length="0.0097" />
-      </geometry>
-      <material name="base_color"/>
-    </visual>
-
-    <collision>
-      <geometry>
-        <cylinder radius="0.028" length="0.0097" />
-      </geometry>
-    </collision>
-  </link>
-  <!-- ================= JOINT 1 ================= -->
   <joint name="joint_1" type="revolute">
     <origin xyz="0 0.07 0.5" rpy="0 0 0"/>
-    <parent link="base_link"/>
-    <child link="arm_link1"/>
+    <parent link="base_link"/><child link="armlink1"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-${PI/2}" upper="${PI/2}" effort="100" velocity="3"/>
+    <limit lower="-1.2" upper="1.2" effort="100" velocity="3"/>
   </joint>
 
-  <!-- ================= JOINT 2 ================= -->
+  <link name="armlink2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/><mass value="1.0"/><inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <geometry><mesh filename="package://${pkg_name}/meshes/armlink2.STL"/></geometry>
+      <material name="arm_red"/>
+    </visual>
+    <collision>
+      <geometry><mesh filename="package://${pkg_name}/meshes/armlink2.STL"/></geometry>
+    </collision>
+  </link>
+
   <joint name="joint_2" type="revolute">
-    <origin xyz="0 0.196 -0.02" rpy="0 0 0"/>
-    <parent link="arm_link1"/>
-    <child link="arm_link2"/>
+    <origin xyz="0 0.196 -0.02" rpy="0 0 0"/> 
+    <parent link="armlink1"/><child link="armlink2"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-${PI}" upper="${PI}" effort="100" velocity="3"/>
+    <limit lower="-2.8" upper="2.8" effort="100" velocity="3"/>
   </joint>
-
-  <!-- ================= JOINT 3 ================= -->
-  <joint name="tool_joint" type="fixed">
-    <origin xyz="0 -0.165 -0.107" rpy="0 0 0"/>
-    <parent link="arm_link2"/>
-    <child link="tool_link"/>
-  </joint>
-
 
 </robot>
