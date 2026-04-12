@@ -99,7 +99,7 @@ def generate_launch_description():
             "-name", "assem1_robot",
             "-x", "0.0",
             "-y", "0.0",
-            "-z", "0.304",   # مهم عشان يقف على support
+            "-z", "0.0",   # مهم عشان يقف على support
             "-R", "0.0",
             "-P", "0.0",
             "-Y", "0.0",

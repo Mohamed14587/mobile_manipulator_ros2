@@ -9,7 +9,7 @@
   <link name="world" />
   <joint name="world_to_base_joint" type="fixed">
     <parent link="world" /><child link="base_link" />
-    <origin xyz="0 0 0" rpy="0 0 0" />
+    <origin xyz="0 0 0.304" rpy="0 0 0" />
   </joint>
 
   <link name="base_link">
@@ -42,7 +42,7 @@
     <origin xyz="0 0.07 0.5" rpy="0 0 0"/>
     <parent link="base_link"/><child link="armlink1"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-1.2" upper="1.2" effort="100" velocity="3"/>
+    <limit lower="-1.2" upper="1.2" effort="100.0" velocity="3.0"/>
   </joint>
 
   <link name="armlink2">
@@ -62,7 +62,28 @@
     <origin xyz="0 0.196 -0.02" rpy="0 0 0"/> 
     <parent link="armlink1"/><child link="armlink2"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-2.8" upper="2.8" effort="100" velocity="3"/>
+    <limit lower="-2.8" upper="2.8" effort="100.0" velocity="3.0"/>
   </joint>
+
+  <link name="end_effector_point" />
+  <joint name="end_effector_joint" type="fixed">
+    <origin xyz="0 0.19 0" rpy="0 0 0"/> 
+    <parent link="armlink2"/>
+    <child link="end_effector_point"/>
+  </joint>
+
+  <ros2_control name="FakeSystem" type="system">
+    <hardware>
+      <plugin>mock_components/GenericSystem</plugin>
+    </hardware>
+    <joint name="joint_1">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/> </joint>
+    <joint name="joint_2">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/> </joint>
+  </ros2_control>
 
 </robot>
