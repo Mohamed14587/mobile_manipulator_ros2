@@ -13,50 +13,43 @@ from launch_ros.parameter_descriptions import ParameterValue
 
 
 def generate_launch_description():
-
-    # ================= PACKAGE =================
+    # 1. إعداد المسارات لحزمة assem1
+    # نستخدم الحزمة من مجلد الـ install لضمان التزامن
     assem1_description = get_package_share_directory("assem1_description")
 
-    # ================= MODEL ARG =================
+    # تحديد ملف الـ Xacro الرئيسي
+    model_path = os.path.join(assem1_description, "urdf", "assem1.urdf.xacro")
+    
     model_arg = DeclareLaunchArgument(
-        name="model",
-        default_value=os.path.join(
-            assem1_description,
-            "urdf",
-            "assem1.urdf.xacro"
-        ),
+        name="model", 
+        default_value=model_path,
         description="Absolute path to robot urdf file"
     )
 
-    # ================= WORLD ARG =================
-    world_name_arg = DeclareLaunchArgument(
-        name="world_name",
-        default_value="empty"
+    # 2. تحديد العالم (World)
+    world_name_arg = DeclareLaunchArgument(name="world_name", default_value="empty")
+
+    world_path = PathJoinSubstitution([
+            assem1_description,
+            "worlds",
+            PythonExpression(expression=["'", LaunchConfiguration("world_name"), "'", " + '.world'"])
+        ]
     )
 
-    # ================= WORLD PATH =================
-    world_path = PathJoinSubstitution([
-        assem1_description,
-        "worlds",
-        PythonExpression(["'", LaunchConfiguration("world_name"), "'", " + '.world'"])
-    ])
-
-    # ================= RESOURCE PATH =================
-    model_path = str(Path(assem1_description).parent.resolve())
-    model_path += pathsep + os.path.join(assem1_description, 'models')
-
+    # 3. إعداد بيئة جازيبو (GZ_SIM_RESOURCE_PATH)
+    # نربط جازيبو مباشرة بمجلد الـ share الخاص بالـ install
+    resource_path = str(Path(assem1_description).parent.resolve())
+    
     gazebo_resource_path = SetEnvironmentVariable(
         "GZ_SIM_RESOURCE_PATH",
-        model_path
+        resource_path
     )
 
-    # ================= ROS DISTRO =================
+    # 4. معالجة الـ Xacro
     ros_distro = os.environ.get("ROS_DISTRO", "humble")
     is_ignition = "True" if ros_distro == "humble" else "False"
 
-    # ================= ROBOT DESCRIPTION =================
-    robot_description = ParameterValue(
-        Command([
+    robot_description = ParameterValue(Command([
             "xacro ",
             LaunchConfiguration("model"),
             " is_ignition:=",
@@ -65,62 +58,44 @@ def generate_launch_description():
         value_type=str
     )
 
-    # ================= STATE PUBLISHER =================
+    # 5. Robot State Publisher
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
-        parameters=[{
-            "robot_description": robot_description,
-            "use_sim_time": True
-        }]
+        parameters=[{"robot_description": robot_description,
+                     "use_sim_time": True}]
     )
 
-    # ================= GAZEBO =================
+    # 6. تشغيل محاكي Gazebo (Ignition)
     gazebo = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([
-            os.path.join(
-                get_package_share_directory("ros_gz_sim"),
-                "launch",
-                "gz_sim.launch.py"
-            )
-        ]),
-        launch_arguments={
-            "gz_args": PythonExpression(["'", world_path, " -v 4 -r'"])
-        }.items()
-    )
+                PythonLaunchDescriptionSource([os.path.join(
+                    get_package_share_directory("ros_gz_sim"), "launch"), "/gz_sim.launch.py"]),
+                launch_arguments={
+                    "gz_args": PythonExpression(["'", world_path, " -v 4 -r'"])
+                }.items()
+             )
 
-    # ================= SPAWN ROBOT =================
+    # 7. إدراج الروبوت (Spawn)
+    # تم تغيير الاسم إلى assem1_arm_only لكسر أي كاش قديم في جازيبو
     gz_spawn_entity = Node(
         package="ros_gz_sim",
         executable="create",
         output="screen",
         arguments=[
             "-topic", "robot_description",
-            "-name", "assem1_robot",
-            "-x", "0.0",
-            "-y", "0.0",
-            "-z", "0.0",   # مهم عشان يقف على support
-            "-R", "0.0",
-            "-P", "0.0",
-            "-Y", "0.0",
+            "-name", "assem1",  # تغيير الاسم هنا جوهري
+            "-allow_renaming", "true",
+            "-z", "0.0",
         ],
     )
 
-    # ================= CLOCK + CAMERA INFO =================
+    # 8. الجسر (Bridge)
     gz_ros2_bridge = Node(
         package="ros_gz_bridge",
         executable="parameter_bridge",
         arguments=[
             "/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock",
-            "/camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo"
         ],
-    )
-
-    # ================= IMAGE BRIDGE =================
-    ros_gz_image_bridge = Node(
-        package="ros_gz_image",
-        executable="image_bridge",
-        arguments=["/camera/image_raw"]
     )
 
     return LaunchDescription([
@@ -131,5 +106,4 @@ def generate_launch_description():
         gazebo,
         gz_spawn_entity,
         gz_ros2_bridge,
-        ros_gz_image_bridge
     ])

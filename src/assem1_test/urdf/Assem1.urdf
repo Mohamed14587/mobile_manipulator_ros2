@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Assem1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00155506458890642 -0.0167350728595071 0.196068139571374"
+        rpy="0 0 0" />
+      <mass
+        value="36.7025357857225" />
+      <inertia
+        ixx="1.19283308759496"
+        ixy="-3.51896300637401E-06"
+        ixz="1.99354682337673E-07"
+        iyy="1.33312260434488"
+        iyz="0.00419911892440131"
+        izz="1.35147505804967" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Left_wheel">
+    <inertial>
+      <origin
+        xyz="-3.06256353610479E-09 -1.20896110900048E-08 0.00479339715197669"
+        rpy="0 0 0" />
+      <mass
+        value="0.0922917375027572" />
+      <inertia
+        ixx="0.000141545400704209"
+        ixy="-2.06461032840064E-11"
+        ixz="-1.02248643807838E-11"
+        iyy="0.000141544096645698"
+        iyz="-2.6977277401381E-11"
+        izz="0.0002252540982412" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leftwheel"
+    type="continuous">
+    <origin
+      xyz="0 0.25498 -0.188"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Left_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Right_wheel">
+    <inertial>
+      <origin
+        xyz="3.06143022044125E-09 -1.20857057694934E-08 -0.00479339714908333"
+        rpy="0 0 0" />
+      <mass
+        value="0.0922917374397851" />
+      <inertia
+        ixx="0.000141545400710461"
+        ixy="2.06410667434802E-11"
+        ixz="-1.02121235750665E-11"
+        iyy="0.000141544096649246"
+        iyz="2.69726379704069E-11"
+        izz="0.000225254098228782" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rightwreel"
+    type="continuous">
+    <origin
+      xyz="0 -0.25502 -0.188"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Right_wheel" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Caster_1">
+    <inertial>
+      <origin
+        xyz="-0.035275891589382 0.00580828165625702 -0.00311975409525078"
+        rpy="0 0 0" />
+      <mass
+        value="0.585808382602343" />
+      <inertia
+        ixx="0.000551623388855379"
+        ixy="1.88511707291591E-05"
+        ixz="-5.60975500731634E-05"
+        iyy="0.000382179453675265"
+        iyz="-3.78791423823395E-05"
+        izz="0.00068252815443526" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Caster_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Caster_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster1"
+    type="continuous">
+    <origin
+      xyz="0.29031 0.17759 -0.15623"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Caster_1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Empty_Link">
+    <inertial>
+      <origin
+        xyz="-2.3489592937409E-08 -4.51467752071721E-11 -9.72476782434839E-08"
+        rpy="0 0 0" />
+      <mass
+        value="1.06721078657091" />
+      <inertia
+        ixx="0.000476140505873741"
+        ixy="6.20443463971414E-19"
+        ixz="6.48044087020466E-05"
+        iyy="0.000460480636810305"
+        iyz="2.50836569154054E-18"
+        izz="0.000728657297177633" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Empty_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Empty_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="weelcaster1"
+    type="continuous">
+    <origin
+      xyz="-0.01926 0.0047517 -0.055512"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="Caster_1" />
+    <child
+      link="Empty_Link" />
+    <axis
+      xyz="0.23502 0 0.97199" />
+  </joint>
+  <link
+    name="Caster_2">
+    <inertial>
+      <origin
+        xyz="-0.00319501952400647 0.00490162667456961 -0.0030358083689912"
+        rpy="0 0 0" />
+      <mass
+        value="0.568674136706872" />
+      <inertia
+        ixx="0.000422933243894265"
+        ixy="-3.18669815606215E-05"
+        ixz="5.59173802613492E-05"
+        iyy="0.000509353159552698"
+        iyz="-4.28638185435833E-05"
+        izz="0.000681363739268127" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Caster_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Caster_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster2"
+    type="continuous">
+    <origin
+      xyz="-0.27761 0.19029 -0.15623"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Caster_2" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Empty_Link2">
+    <inertial>
+      <origin
+        xyz="6.6066980775048E-09 -6.24954532568722E-11 9.97406108815824E-08"
+        rpy="0 0 0" />
+      <mass
+        value="1.06721078657091" />
+      <inertia
+        ixx="0.000461722824688413"
+        ixy="1.6641436865393E-19"
+        ixz="1.8735935138088E-05"
+        iyy="0.000460480636810305"
+        iyz="2.93795194145687E-18"
+        izz="0.00074307497836296" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Empty_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Empty_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="casterwheel2"
+    type="continuous">
+    <origin
+      xyz="0.019788 -0.001407 -0.055512"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="Caster_2" />
+    <child
+      link="Empty_Link2" />
+    <axis
+      xyz="-0.066155 0 -0.99781" />
+  </joint>
+  <link
+    name="Caster_3">
+    <inertial>
+      <origin
+        xyz="-0.00343457279816928 -0.00425088510972743 -0.00303479975691134"
+        rpy="0 0 0" />
+      <mass
+        value="0.568664498255161" />
+      <inertia
+        ixx="0.000549067886838521"
+        ixy="4.18316193484824E-05"
+        ixz="5.58015039159187E-05"
+        iyy="0.000383064954110297"
+        iyz="4.57861181051339E-05"
+        izz="0.000681332583879271" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Caster_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Caster_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster3"
+    type="continuous">
+    <origin
+      xyz="-0.29031 -0.17764 -0.15623"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Caster_3" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Empty_Link3">
+    <inertial>
+      <origin
+        xyz="-3.06898400026512E-08 1.00507380196291E-11 9.51734757115297E-08"
+        rpy="0 0 0" />
+      <mass
+        value="1.0672107865709" />
+      <inertia
+        ixx="0.000487196059114887"
+        ixy="-9.72601687017595E-19"
+        ixz="-8.28800275114445E-05"
+        iyy="0.000460480636810305"
+        iyz="2.99577040698735E-18"
+        izz="0.000717601743936485" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Empty_Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Empty_Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="casterwheel3"
+    type="continuous">
+    <origin
+      xyz="0.01891 0.0059957 -0.055512"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="Caster_3" />
+    <child
+      link="Empty_Link3" />
+    <axis
+      xyz="0.30679 0 -0.95178" />
+  </joint>
+  <link
+    name="Caster_4">
+    <inertial>
+      <origin
+        xyz="-0.0120122727642447 -0.0524769152873983 -0.0119838106843425"
+        rpy="0 0 0" />
+      <mass
+        value="0.568664179194258" />
+      <inertia
+        ixx="0.000416216576417651"
+        ixy="2.7891138356659E-05"
+        ixz="-1.29396663120577E-05"
+        iyy="0.000681332605352682"
+        iyz="-4.76612202956274E-05"
+        izz="0.000515916252248981" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Caster_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Caster_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster4"
+    type="continuous">
+    <origin
+      xyz="0.29588 -0.18261 -0.21174"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Caster_4" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Empty_Link4">
+    <inertial>
+      <origin
+        xyz="-3.81156268769445E-08 -1.1498906271612E-09 9.2705818466321E-08"
+        rpy="0 0 0" />
+      <mass
+        value="1.06721078657091" />
+      <inertia
+        ixx="0.000504549784122729"
+        ixy="-1.42465177926377E-18"
+        ixz="-0.000102792723883003"
+        iyy="0.000460480636810305"
+        iyz="3.18438960836454E-18"
+        izz="0.000700248018928644" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Empty_Link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Empty_Link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="casterwheel44"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Caster_4" />
+    <child
+      link="Empty_Link4" />
+    <axis
+      xyz="0.39403 0 -0.9191" />
+  </joint>
+  <link
+    name="Armlink1">
+    <inertial>
+      <origin
+        xyz="0.0003200901517868 0.10625947606417 0.00859769829677659"
+        rpy="0 0 0" />
+      <mass
+        value="0.332522666985014" />
+      <inertia
+        ixx="0.00125293093936372"
+        ixy="-4.70356148528572E-06"
+        ixz="3.39571390138256E-10"
+        iyy="6.28321938668438E-05"
+        iyz="7.22390011604219E-08"
+        izz="0.00131069685758587" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Armlink1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.988235294117647 0.0823529411764706 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/Armlink1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="armlinl1"
+    type="revolute">
+    <origin
+      xyz="0 0.069976 0.4897"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Armlink1" />
+    <axis
+      xyz="0 0 1" />
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="1.0" />
+  </joint>
+  <link
+    name="armlink2">
+    <inertial>
+      <origin
+        xyz="-0.000378523464681146 -0.0941307105712545 -0.00947503989193477"
+        rpy="0 0 0" />
+      <mass
+        value="0.300704203880306" />
+      <inertia
+        ixx="0.000749795032834774"
+        ixy="-2.68858863020437E-06"
+        ixz="3.21601810886238E-08"
+        iyy="7.27567345311832E-05"
+        iyz="-4.00235469561631E-08"
+        izz="0.000789914137832894" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/armlink2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.988235294117647 0.0823529411764706 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assem1_test/meshes/armlink2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="armlinl2"
+    type="revolute">
+    <origin
+      xyz="0.00077145 0.26497 0.4729"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="armlink2" />
+    <axis
+      xyz="0 0 1" />
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="1.0" />
+  </joint>
+</robot>
