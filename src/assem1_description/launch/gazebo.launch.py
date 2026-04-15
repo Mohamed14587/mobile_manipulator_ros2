@@ -13,20 +13,17 @@ from launch_ros.parameter_descriptions import ParameterValue
 
 
 def generate_launch_description():
-    # 1. إعداد المسارات لحزمة assem1
-    # نستخدم الحزمة من مجلد الـ install لضمان التزامن
     assem1_description = get_package_share_directory("assem1_description")
 
-    # تحديد ملف الـ Xacro الرئيسي
-    model_path = os.path.join(assem1_description, "urdf", "assem1.urdf.xacro")
-    
+    # تحديد مسار موديل الروبوت الافتراضي
     model_arg = DeclareLaunchArgument(
-        name="model", 
-        default_value=model_path,
+        name="model", default_value=os.path.join(
+                assem1_description, "urdf", "assem1.urdf.xacro"
+            ),
         description="Absolute path to robot urdf file"
     )
 
-    # 2. تحديد العالم (World)
+    # تحديد العالم (World) الافتراضي
     world_name_arg = DeclareLaunchArgument(name="world_name", default_value="empty")
 
     world_path = PathJoinSubstitution([
@@ -36,17 +33,17 @@ def generate_launch_description():
         ]
     )
 
-    # 3. إعداد بيئة جازيبو (GZ_SIM_RESOURCE_PATH)
-    # نربط جازيبو مباشرة بمجلد الـ share الخاص بالـ install
-    resource_path = str(Path(assem1_description).parent.resolve())
-    
+    # إعداد مسارات الموارد لـ Gazebo Sim ليتعرف على الـ Meshes
+    model_path = str(Path(assem1_description).parent.resolve())
+    model_path += pathsep + os.path.join(get_package_share_directory("assem1_description"), 'models')
+
     gazebo_resource_path = SetEnvironmentVariable(
         "GZ_SIM_RESOURCE_PATH",
-        resource_path
-    )
+        model_path
+        )
 
-    # 4. معالجة الـ Xacro
-    ros_distro = os.environ.get("ROS_DISTRO", "humble")
+    # تحديد نوع السيميوليشن بناءً على النسخة (Humble = Ignition)
+    ros_distro = os.environ["ROS_DISTRO"]
     is_ignition = "True" if ros_distro == "humble" else "False"
 
     robot_description = ParameterValue(Command([
@@ -58,7 +55,6 @@ def generate_launch_description():
         value_type=str
     )
 
-    # 5. Robot State Publisher
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
@@ -66,7 +62,7 @@ def generate_launch_description():
                      "use_sim_time": True}]
     )
 
-    # 6. تشغيل محاكي Gazebo (Ignition)
+    # تشغيل Gazebo Sim (Ignition)
     gazebo = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory("ros_gz_sim"), "launch"), "/gz_sim.launch.py"]),
@@ -75,27 +71,38 @@ def generate_launch_description():
                 }.items()
              )
 
-    # 7. إدراج الروبوت (Spawn)
-    # تم تغيير الاسم إلى assem1_arm_only لكسر أي كاش قديم في جازيبو
+    # وضع الروبوت داخل المحاكي
     gz_spawn_entity = Node(
         package="ros_gz_sim",
         executable="create",
         output="screen",
         arguments=[
             "-topic", "robot_description",
-            "-name", "assem1",  # تغيير الاسم هنا جوهري
-            "-allow_renaming", "true",
-            "-z", "0.0",
+            "-name", "assem1", # اسم الروبوت في المحاكي
+            "-x", "0.0",  
+            "-y", "0.0",  
+            "-z", "0.304",  
+            "-R", "0.0", 
+            "-P", "0.0",
+            "-Y", "0.0", 
         ],
     )
 
-    # 8. الجسر (Bridge)
+    # إعداد الجسر (Bridge) لنقل الـ Clock وأي بيانات مستشعرات
     gz_ros2_bridge = Node(
         package="ros_gz_bridge",
         executable="parameter_bridge",
         arguments=[
             "/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock",
+            "/camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo"
         ],
+    )
+
+    # جسر الصور الخاص بالكاميرا (لو موجودة)
+    ros_gz_image_bridge = Node(
+        package="ros_gz_image",
+        executable="image_bridge",
+        arguments=["/camera/image_raw"]
     )
 
     return LaunchDescription([
@@ -106,4 +113,5 @@ def generate_launch_description():
         gazebo,
         gz_spawn_entity,
         gz_ros2_bridge,
+        ros_gz_image_bridge
     ])

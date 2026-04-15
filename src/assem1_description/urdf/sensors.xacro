@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot name="assem1_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="assem1" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <!-- ================= PROPERTIES ================= -->
     <xacro:property name="PI" value="3.14159265359"/>
