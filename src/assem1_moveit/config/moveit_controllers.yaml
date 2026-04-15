@@ -1,0 +1,14 @@
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+moveit_simple_controller_manager:
+  controller_names:
+    - arm_controller
+
+  arm_controller:
+    # السطر ده هو اللي بيربط مع الـ Action اللي بيفتحه الـ JointTrajectoryController
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - joint_1
+      - joint_2

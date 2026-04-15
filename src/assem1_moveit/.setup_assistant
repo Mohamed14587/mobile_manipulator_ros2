@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: assem1_description
+    relative_path: urdf/assem1.urdf.xacro
+  srdf:
+    relative_path: config/assem1.srdf
+  package_settings:
+    author_name: mohamed
+    author_email: mhmdkamel870@gmail.com
+    generated_timestamp: 1776240318

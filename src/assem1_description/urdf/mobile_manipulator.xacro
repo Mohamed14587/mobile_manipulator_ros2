@@ -1,17 +1,11 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="assem1" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <material name="silver"><color rgba="0.776 0.756 0.737 1" /></material>
   <material name="dark_gray"><color rgba="0.3 0.3 0.3 1" /></material>
   <material name="red_arm"><color rgba="0.988 0.082 0 1" /></material>
 
   <link name="world" />
-
-  <joint name="world_to_base_joint" type="fixed">
-    <parent link="world" />
-    <child link="base_link" />
-    <origin xyz="0 0 0" rpy="0 0 0" />
-  </joint>
 
   <link name="base_link">
     <inertial>
@@ -31,6 +25,12 @@
       </geometry>
     </collision>
   </link>
+
+  <joint name="virtual_joint" type="fixed">
+      <parent link="world"/>
+      <child link="base_link"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/> 
+  </joint>
 
   <link name="arm_link1">
     <inertial>
