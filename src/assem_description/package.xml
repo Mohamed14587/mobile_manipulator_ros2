@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>assem_description</name>
+  <version>0.0.0</version>
+  <description>assem robot description and simulation</description>
+
+  <maintainer email="mohamed@example.com">mohamed</maintainer>
+  <license>MIT</license>
+
+  <!-- build -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- runtime -->
+  <depend>rclpy</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>xacro</depend>
+
+  <!-- gazebo / ignition -->
+  <depend>ros_gz_sim</depend>
+  <depend>ros_gz_bridge</depend>
+  <depend>ros_gz_image</depend>
+
+  <!-- control -->
+  <depend>controller_manager</depend>
+  <depend>joint_state_broadcaster</depend>
+  <depend>joint_trajectory_controller</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

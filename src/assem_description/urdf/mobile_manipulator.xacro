@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<robot name="assem" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <material name="silver"><color rgba="0.776 0.756 0.737 1" /></material>
+  <material name="dark_gray"><color rgba="0.3 0.3 0.3 1" /></material>
+  <material name="red_arm"><color rgba="0.988 0.082 0 1" /></material>
+
+  <link name="world" />
+
+  <link name="base_link">
+    
+    <visual>
+      <geometry>
+        <mesh filename="package://assem_description/meshes/base_link.STL"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://assem_description/meshes/base_link.STL"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin
+        xyz="-0.00155506458890642 -0.0167350728595071 0.196068139571374"
+        rpy="0 0 0" />
+      <mass
+        value="36.7025357857225" />
+      <inertia
+        ixx="1.19283308759496"
+        ixy="-3.51896300637401E-06"
+        ixz="1.99354682337673E-07"
+        iyy="1.33312260434488"
+        iyz="0.00419911892440131"
+        izz="1.35147505804967" />
+    </inertial>
+  </link>
+
+  <joint name="virtual_joint" type="fixed">
+      <parent link="world"/>
+      <child link="base_link"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/> 
+  </joint>
+
+  <link name="arm_link1">
+    <visual>
+      <geometry>
+        <mesh filename="package://assem_description/meshes/Armlink1.STL"/>
+      </geometry>
+      <material name="red_arm"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://assem_description/meshes/Armlink1.STL"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin
+        xyz="0.0003200901517868 0.10625947606417 0.00859769829677659"
+        rpy="0 0 0" />
+      <mass
+        value="0.332522666985014" />
+      <inertia
+        ixx="0.00125293093936372"
+        ixy="-4.70356148528572E-06"
+        ixz="3.39571390138256E-10"
+        iyy="6.28321938668438E-05"
+        iyz="7.22390011604219E-08"
+        izz="0.00131069685758587" />
+    </inertial>
+  </link>
+
+  <joint name="joint_1" type="revolute">
+    <origin
+      xyz="0 0.069976 0.4897" rpy="0 0 0" />
+    <parent link="base_link"/>
+    <child link="arm_link1"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-0.785" upper="0.785" effort="100" velocity="3"/>
+  </joint>
+
+  <link name="arm_link2">
+    <visual>
+      <geometry>
+        <mesh filename="package://assem_description/meshes/armlink2.STL"/>
+      </geometry>
+      <material name="red_arm"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://assem_description/meshes/armlink2.STL"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin
+        xyz="-0.000378523464681146 -0.0941307105712545 -0.00947503989193477"
+        rpy="0 0 0" />
+      <mass
+        value="0.300704203880306" />
+      <inertia
+        ixx="0.000749795032834774"
+        ixy="-2.68858863020437E-06"
+        ixz="3.21601810886238E-08"
+        iyy="7.27567345311832E-05"
+        iyz="-4.00235469561631E-08"
+        izz="0.000789914137832894" />
+    </inertial>
+  </link>
+
+  <joint name="joint_2" type="revolute">
+    <origin xyz="0.00077145 0.194994 -0.0168" rpy="0 0 0"/>
+    <parent link="arm_link1"/>
+    <child link="arm_link2"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.14" upper="3.14" effort="100" velocity="3"/>
+  </joint>
+
+</robot>
