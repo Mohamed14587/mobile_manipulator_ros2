@@ -80,7 +80,7 @@
     <parent link="base_link"/>
     <child link="arm_link1"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-0.785" upper="0.785" effort="100" velocity="3"/>
+    <limit lower="-0.785" upper="0.785" effort="100.0" velocity="3.0"/>
   </joint>
 
   <link name="arm_link2">
@@ -118,7 +118,7 @@
     <parent link="arm_link1"/>
     <child link="arm_link2"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-3.14" upper="3.14" effort="100" velocity="3"/>
+    <limit lower="-3.14" upper="3.14" effort="100.0" velocity="3.0"/>
   </joint>
 
 </robot>

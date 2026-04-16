@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: assem_description
+    relative_path: urdf/mobile_manipulator.xacro
+  srdf:
+    relative_path: config/assem.srdf
+  package_settings:
+    author_name: Mohamed
+    author_email: mhmdkamel870@gmail.com
+    generated_timestamp: 1776355125
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
