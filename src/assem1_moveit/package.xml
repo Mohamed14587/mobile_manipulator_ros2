@@ -3,7 +3,7 @@
 <package format="3">
   <name>assem1_moveit</name>
   <version>0.0.0</version>
-  <description>MoveIt config for assem1 robot, mirrored from Panda setup</description>
+  <description>MoveIt config for assem1 robot, mirrored from panda setup</description>
   <maintainer email="mhmdkamel870@gmail.com">Mohamed</maintainer>
   <license>Apache-2.0</license>
 
