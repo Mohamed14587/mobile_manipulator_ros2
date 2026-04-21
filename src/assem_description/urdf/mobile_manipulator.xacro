@@ -19,7 +19,7 @@
       <origin
         xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://assem_description/meshes/collision/base_link.obj"/>
+        <mesh filename="package://assem_description/meshes/base_link.STL"/>
       </geometry>
     </collision>
     <inertial>
@@ -55,7 +55,7 @@
       <origin
         xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://assem_description/meshes/collision/Armlink1.obj"/>
+        <mesh filename="package://assem_description/meshes/Armlink1.STL"/>
       </geometry>
     </collision>
     <inertial>
@@ -94,7 +94,7 @@
       <origin
         xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://assem_description/meshes/collision/armlink2.obj"/>
+        <mesh filename="package://assem_description/meshes/armlink2.STL"/>
       </geometry>
     </collision>
     <inertial>
