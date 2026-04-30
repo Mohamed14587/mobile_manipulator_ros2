@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <robot name="assem" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+  <xacro:arg name="is_sim" default="true" />
+  <xacro:arg name="is_ignition" default="true" />
+
   <xacro:include filename="$(find assem_description)/urdf/mobile_manipulator.xacro" />
   <xacro:include filename="$(find assem_description)/urdf/gazebo.xacro" />
   <xacro:include filename="$(find assem_description)/urdf/ros2_control.xacro" />

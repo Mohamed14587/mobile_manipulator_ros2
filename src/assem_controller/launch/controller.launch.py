@@ -4,7 +4,7 @@ from launch.actions import DeclareLaunchArgument
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 from launch.substitutions import Command, LaunchConfiguration
-from launch.conditions import IfCondition, UnlessCondition
+from launch.conditions import UnlessCondition
 from ament_index_python.packages import get_package_share_directory
 
 
@@ -26,8 +26,7 @@ def generate_launch_description():
                     "urdf",
                     "assem.urdf.xacro",
                 ),
-                " is_sim:=True",
-                " is_ignition:=True" 
+                " is_sim:=False"
             ]
         ),
         value_type=str,
@@ -37,15 +36,13 @@ def generate_launch_description():
         package="robot_state_publisher",
         executable="robot_state_publisher",
         parameters=[{"robot_description": robot_description,
-                     "use_sim_time": is_sim}],
+                     "use_sim_time": False}],
+        condition=UnlessCondition(is_sim),
     )
 
-    # التعديل هنا: النود دي تشتغل "فقط" لو مش مشغلين سيميوليشن (يعني لو هاردوير حقيقي)
-    # في حالة السيميوليشن، جازيبو هو اللي بيقوم بالوظيفة دي تلقائياً
     controller_manager = Node(
         package="controller_manager",
         executable="ros2_control_node",
-        condition=UnlessCondition(is_sim),
         parameters=[
             {"robot_description": robot_description,
              "use_sim_time": is_sim},
@@ -55,6 +52,7 @@ def generate_launch_description():
                 "assem_controllers.yaml",
             ),
         ],
+        condition=UnlessCondition(is_sim),
     )
 
     joint_state_broadcaster_spawner = Node(
@@ -72,6 +70,7 @@ def generate_launch_description():
         executable="spawner",
         arguments=["arm_controller", "--controller-manager", "/controller_manager"],
     )
+
 
     return LaunchDescription(
         [

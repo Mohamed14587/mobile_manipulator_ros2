@@ -1,0 +1,10 @@
+<library path="assem_controller">
+    <class name="assem_controller/AssemInterface"
+      type="assem_controller::AssemInterface"
+      base_class_type="hardware_interface::SystemInterface"
+    >
+      <description>
+        Assem Hardware Interface
+      </description>
+    </class>
+  </library>

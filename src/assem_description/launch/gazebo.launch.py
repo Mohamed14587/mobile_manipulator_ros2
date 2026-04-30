@@ -52,7 +52,7 @@ def generate_launch_description():
     )
 
     # ------------------- ROS distro -------------------
-    ros_distro = os.environ.get("ROS_DISTRO", "humble")
+    ros_distro = os.environ.get("ROS_DISTRO")
     is_ignition = "True" if ros_distro == "humble" else "False"
 
     # ------------------- Robot Description (PANDA STYLE) -------------------
