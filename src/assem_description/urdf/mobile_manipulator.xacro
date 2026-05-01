@@ -121,7 +121,7 @@
     <limit lower="-3.14" upper="3.14" effort="100.0" velocity="3.0"/>
   </joint>
 
-  <!-- <link name="suction_cup">
+  <link name="suction_cup">
     <visual>
       <geometry>
         <cylinder radius="0.028" length="0.0097" />
@@ -157,6 +157,6 @@
     <child link="suction_cup"/>
     <axis xyz="0 0 1"/>
     <limit lower="-3.14" upper="3.14" effort="100.0" velocity="3.0"/>
-  </joint>-->
+  </joint>
 
 </robot>

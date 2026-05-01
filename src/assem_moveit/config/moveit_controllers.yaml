@@ -1,4 +1,5 @@
 # MoveIt uses this configuration for controller management
+
 moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
 
 moveit_simple_controller_manager:
@@ -7,16 +8,8 @@ moveit_simple_controller_manager:
 
   arm_controller:
     type: FollowJointTrajectory
-    action_ns: follow_joint_trajectory
-    default: true
     joints:
       - joint_1
       - joint_2
-    
-    # --- التعديلات الجوهرية لحل مشكلة فشل التنفيذ ---
-    
-    # زيادة السماحية لنقطة البداية لتجنب خطأ الـ 0.01 الشهير
-    allowed_start_tolerance: 0.1  # راديان (حوالي 5 درجات) لضمان القبول دائماً
-    
-    # منع التوقف المفاجئ لو الحسابات اتأخرت ملي ثانية
-    execution_duration_monitoring: false
+    action_ns: follow_joint_trajectory
+    default: true

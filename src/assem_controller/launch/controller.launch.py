@@ -71,7 +71,6 @@ def generate_launch_description():
         arguments=["arm_controller", "--controller-manager", "/controller_manager"],
     )
 
-
     return LaunchDescription(
         [
             is_sim_arg,
@@ -79,5 +78,6 @@ def generate_launch_description():
             controller_manager,
             joint_state_broadcaster_spawner,
             arm_controller_spawner,
+            
         ]
     )

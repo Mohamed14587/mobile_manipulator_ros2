@@ -23,8 +23,9 @@ setup(
         ],
     },
     entry_points={
-        'console_scripts': [
-            'color_detector = assem_vision.color_detector:main',
-        ],
-    },
+    'console_scripts': [
+        'color_detector = assem_vision.color_detector:main',
+        'go_to_color = assem_vision.go_to_color:main',
+         ],
+     },
 )
